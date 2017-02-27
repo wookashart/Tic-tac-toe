@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+div.game-conteiner {
+    width: 300px;
+    margin-top: 130px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+div.game-conteiner .o:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+div.game-conteiner .x:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: black;
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+}
+
+div.game-conteiner .x:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: black;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+    left: 50%;
+}
+
+div.game-conteiner .o.win:after {
+    border-color: green;
+}
+
+div.game-conteiner .x.win:after {
+    background: green;
+}
+
+div.game-conteiner .x.win:before {
+    background: green;
+}
+
+div.game-conteiner div{
+    border: 1px solid black;
+    width: 100px;
+    float: left;
+    height: 100px;
+    position: relative;
+}
+
+div.modal {
+    display: none;
+}
