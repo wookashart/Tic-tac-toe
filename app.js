@@ -1,17 +1,14 @@
 var count = 0;
 
 $('.game-conteiner div').on('click', function(){
-    var button = $('.game-conteiner div');
-    count += 1; 
-
-    if (count % 2 === 1) {
-        if ($(button.is('div'))) {
+    
+    if($(this).hasClass('')){
+        if (count % 2 === 1) {
             $(this).addClass('x');
-        }
-    } else {
-        if ($(button.is('div'))) {
+            count += 1; 
+        } else {
             $(this).addClass('o');
+            count += 1; 
         }
     }
-    // console.log(count)
 })
